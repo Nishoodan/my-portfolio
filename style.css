@@ -1,0 +1,228 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Raleway:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Raleway', sans-serif; /* Modern sans-serif font for body */
+  background: linear-gradient(to right, #FF6347, #FFB6C1);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-size: cover;
+  min-height: 100vh; /* Ensures the page takes up the full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1.5s ease-out;
+  margin: 0;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(50px);
+  animation: slideUp 1s ease-out;
+  overflow: hidden;
+  min-height: 60vh; /* Ensure the container has enough height */
+}
+
+h1 {
+  font-family: 'Lobster', cursive; /* Cursive and bold font for headings */
+  font-size: 3.5rem;
+  color: #fff;
+  animation: bounce 1s infinite, fadeIn 1.5s ease-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  animation: fadeIn 2s ease-out;
+}
+
+section {
+  margin-top: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-family: 'Lobster', cursive;
+  animation: slideLeft 1s ease-out;
+}
+
+.about-me p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #fff;
+  animation: fadeIn 2s ease-out;
+}
+
+.profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+  transition: transform 0.3s ease-in-out;
+  animation: zoomIn 1s ease-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.projects ul {
+  list-style-type: none;
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 700px;
+  color: #fff;
+  animation: fadeIn 2s ease-out;
+}
+
+.projects li {
+  margin-bottom: 10px;
+}
+
+.social-links {
+  margin-top: 50px;
+  animation: fadeIn 2s ease-out;
+}
+
+.social-icons {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #FF6347;
+  transform: scale(1.2);
+}
+
+/* Keyframes for Animations */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design - Mobile Devices */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .projects ul {
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    font-size: 2rem;
+    gap: 15px;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* For smaller screens like phones in portrait mode */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .social-icons {
+    font-size: 1.8rem;
+    gap: 10px;
+  }
+}
